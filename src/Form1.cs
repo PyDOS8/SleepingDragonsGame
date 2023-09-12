@@ -1,6 +1,5 @@
 using System.DirectoryServices;
 using System.Windows.Forms.VisualStyles;
-
 namespace WinFormsApp3
 {
     public partial class Form1 : Form
@@ -12,6 +11,7 @@ namespace WinFormsApp3
         public bool gameOver = false;
         public int playerYVelocity = 5;
         public int playerXVelocity = 5;
+        public int gravity = 5;
         private void Form1_Load(object sender, EventArgs e)
         {
             if (gameOver)
@@ -52,9 +52,14 @@ namespace WinFormsApp3
             {
                 playerImg.Top += playerYVelocity;
             }
+            const double PI = 3.141592653589793;
+            double playerVolume = playerImg.Width + 0 * PI / Height;
+            if (e.KeyCode == Keys.Space)
+            {
+                playerImg.Top -= ((int)playerVolume) ^ 2;
+            }
         }
-
-        private void dungeonImg_Click(object sender, EventArgs e)
+       private void dungeonImg_Click(object sender, EventArgs e)
         {
         }
     }
