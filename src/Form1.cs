@@ -11,7 +11,7 @@ namespace WinFormsApp3
         public bool gameOver = false;
         public int playerYVelocity = 5;
         public int playerXVelocity = 5;
-        public int gravity = 5;
+        public int gravity = -10;
         private void Form1_Load(object sender, EventArgs e)
         {
             if (gameOver)
