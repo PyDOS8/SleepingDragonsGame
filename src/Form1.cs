@@ -53,7 +53,7 @@ namespace WinFormsApp3
                 playerImg.Top += playerYVelocity;
             }
             const double PI = 3.141592653589793;
-            double playerVolume = playerImg.Width + 0 * PI / Height;
+            double playerVolume = playerImg.Width * playerImg.Height;
             if (e.KeyCode == Keys.Space)
             {
                 playerImg.Top -= ((int)playerVolume) ^ 2;
