@@ -56,7 +56,7 @@ namespace WinFormsApp3
             double playerVolume = playerImg.Width * playerImg.Height;
             if (e.KeyCode == Keys.Space)
             {
-                playerImg.Top -= ((int)playerVolume) ^ 2;
+                playerImg.Top -= (int)(Math.pow(playerVolume, 2) / gravity);
             }
         }
        private void dungeonImg_Click(object sender, EventArgs e)
